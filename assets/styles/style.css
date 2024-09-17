@@ -1,0 +1,582 @@
+/*
+  Submission for Web Development Basic Final Assignment
+  Dicoding - Bangkit Academy Program
+*/
+
+:root {
+  --greyRed: rgb(46, 35, 35);
+  --roundedS: 0.5em;
+  --roundedL: 2em;
+}
+
+body {
+  height: 100%;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  font-family: "Merriweather", serif;
+  margin: 0;
+}
+
+img,
+figcaption {
+  margin: 0;
+  padding: 0;
+  font-size: 0.6em;
+}
+
+strong {
+  color: red;
+  font-weight: 900;
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+header .row-flex {
+  justify-content: space-between;
+  margin-bottom: 0.8%;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.2em;
+  margin: 0;
+  span {
+    margin-left: 10px;
+    font-size: 0.6em;
+  }
+}
+
+header {
+  padding-bottom: 5%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+main {
+  h1 {
+    font-family: "Jolly Lodger", system-ui;
+    letter-spacing: 1px;
+    animation: blinking 3s infinite;
+    color: white;
+    margin-left: 5%;
+  }
+  section {
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  h1,
+  section {
+    margin-right: 5%;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    color: white;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: white;
+  }
+  52% {
+    color: brown;
+  }
+  55% {
+    color: white;
+  }
+  60% {
+    color: white;
+  }
+  62% {
+    color: brown;
+  }
+  65% {
+    color: white;
+  }
+  100% {
+    color: white;
+  }
+}
+
+.containerBG {
+  background-color: var(--greyRed);
+  border: red 1px solid;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  padding: 1%;
+  column-gap: 1%;
+  justify-content: center;
+  border-radius: var(--roundedL);
+  a {
+    padding: 1%;
+    text-align: center;
+    border-radius: var(--roundedL);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+  }
+}
+
+nav > a:hover {
+  background-color: rgb(165, 42, 42);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+h1 {
+  text-align: justify;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 0.8em;
+}
+
+label {
+  font-size: 0.8em;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+hr {
+  border-color: red;
+  margin-right: 30%;
+}
+
+#balloon {
+  position: absolute;
+  right: 0;
+  transition: opacity 1s;
+  &:hover {
+    opacity: 0;
+  }
+}
+
+#goToTop {
+  position: fixed;
+  z-index: 3;
+  bottom: 5%;
+  right: 5%;
+  padding: 1em;
+  border-radius: var(--roundedL);
+  transition: background-color 0.5s;
+  p {
+    margin-left: 1em;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+  }
+}
+
+#popup {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  margin-left: 0;
+  padding: 0px;
+  transition: display 1s;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+.popupContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  border-radius: var(--roundedS);
+  flex-direction: column;
+  padding: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  max-height: 80%;
+  overflow-y: scroll;
+  p,
+  h2 {
+    text-align: center;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+    width: 100%;
+    table {
+      width: 60%;
+      th {
+        text-align: left;
+        font-size: small;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        text-shadow: white 0 0 10px;
+        padding: 1%;
+      }
+      td {
+        padding: 1%;
+        word-break: break-all;
+        font-weight: 400;
+        text-shadow: red 0 0 10px;
+      }
+    }
+  }
+  > p {
+    font-family: "Jolly Lodger", system-ui;
+    font-size: large;
+    color: brown;
+    margin: 0;
+    margin-bottom: 2%;
+  }
+  button {
+    width: 50%;
+  }
+}
+
+form {
+  width: 70%;
+  input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(1);
+  }
+}
+
+label {
+  letter-spacing: 0.3em;
+}
+
+input,
+textarea {
+  font-family: "Merriweather", serif;
+  color: red;
+  font-weight: 600;
+  margin-top: 0.5em;
+  margin-bottom: 1.3em;
+  padding: 0.8em;
+  background-color: transparent;
+  border-radius: var(--roundedS);
+  border-color: white;
+  &:hover {
+    background-color: rgb(26, 26, 26);
+  }
+}
+
+.checkboxes {
+  display: grid;
+  margin-top: 0.5em;
+  margin-bottom: 1.3em;
+  padding: 0.5em;
+  grid-template-columns: 50% 50%;
+  row-gap: 0;
+  label {
+    letter-spacing: 0;
+  }
+  input {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+button {
+  background-color: black;
+  border: 0;
+  border-radius: var(--roundedS);
+  padding: 0.3em;
+  color: red;
+  letter-spacing: 0.1em;
+  font-family: "Jolly Lodger", system-ui;
+  font-size: x-large;
+  &:hover {
+    letter-spacing: 0.2em;
+    color: white;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}
+
+.clowns {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.clown {
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+  margin: 1em;
+  padding: 1em;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-radius: var(--roundedS);
+  transition: background-color 3s, transform 3s;
+  h3 {
+    text-shadow: 1px 1px 2px red;
+    transition: color 3s;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+  }
+  p:first-of-type {
+    margin-bottom: 1em;
+    font-family: "Jolly Lodger", system-ui;
+    font-size: medium;
+    letter-spacing: 0.1em;
+    color: rgb(187, 155, 155);
+    font-weight: 100;
+  }
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &:hover {
+    background-color: black;
+    transform: scale(1.05);
+    h3 {
+      color: red;
+    }
+  }
+}
+
+.faqContent {
+  align-items: unset;
+  div {
+    width: 70%;
+    margin-right: 3%;
+  }
+  aside {
+    width: 20%;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    border-radius: var(--roundedL);
+    h3,
+    h4,
+    p {
+      margin: 3%;
+    }
+    p:first-of-type {
+      font-weight: 900;
+      font-size: 2em;
+      animation: pulse 1s infinite alternate linear;
+    }
+  }
+}
+
+@keyframes pulse {
+  from {
+    color: white;
+  }
+  to {
+    color: red;
+  }
+}
+
+.testimonial {
+  padding: 1%;
+  p {
+    font-size: 0.8em;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+  }
+  q {
+    line-height: 2;
+    background-color: black;
+    padding: 0.5%;
+    margin-left: 1%;
+    span {
+      color: rgb(207, 174, 1);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  background-color: black;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  row-gap: 2%;
+  hr {
+    margin-top: 2%;
+    border-color: rgb(35, 35, 35);
+    margin-right: 10%;
+  }
+  .footerBottom {
+    display: flex;
+    margin-top: 2%;
+    margin-left: 1%;
+    column-gap: 10%;
+  }
+  h2 {
+    margin: 0;
+  }
+  span {
+    font-family: "Jolly Lodger", system-ui;
+    font-size: 1em;
+    color: brown;
+  }
+  p {
+    margin: 0;
+    margin-top: 0.5em;
+    font-size: 1em;
+  }
+  > img {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    opacity: 20%;
+    &:hover {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1em;
+  }
+  h3,
+  q {
+    font-size: 0.8em;
+  }
+  h4 {
+    font-size: 0.6em;
+  }
+  label {
+    font-size: 0.6em;
+  }
+  p,
+  a {
+    font-size: 0.6em;
+  }
+
+  main {
+    section {
+      margin-bottom: 15%;
+    }
+  }
+
+  header .row-flex {
+    flex-direction: column;
+  }
+  nav.containerBG {
+    border: none;
+  }
+  nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 3em;
+    margin-left: -5%;
+    margin-right: -5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 0;
+    border-radius: 0;
+    a {
+      padding: 5%;
+    }
+    a:hover {
+      background-color: rgb(165, 42, 42);
+      transform: unset;
+      cursor: pointer;
+    }
+  }
+
+  #balloon,
+  #goToTop {
+    display: none;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .popupContainer {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10%;
+    div {
+      table {
+        width: 90%;
+      }
+    }
+  }
+
+  .faqContent {
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+    aside {
+      margin-top: 5%;
+      width: 95%;
+      h3,
+      h4,
+      p {
+        margin: 1%;
+      }
+    }
+  }
+
+  footer {
+    padding-top: 5%;
+    hr {
+      margin-top: 5%;
+    }
+    p {
+      font-size: 0.8em;
+    }
+    .footerBottom {
+      flex-direction: column;
+      margin-top: 5%;
+      div {
+        margin-bottom: 5%;
+      }
+    }
+  }
+}

@@ -1,0 +1,361 @@
+<!-- 
+  Submission for Web Development Basic Final Assignment
+  Dicoding - Bangkit Academy Program
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No Clown? No PARTY!</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+    </style>
+  </head>
+  <body>
+    <header class="column-flex">
+      <div class="row-flex">
+        <div class="row-flex">
+          <img src="./assets/images/logo.png" alt="agency logo" width="50px" />
+          <h1 class="logo">
+            THE DERRY's Agency <span>since <strong>1958</strong></span>
+          </h1>
+        </div>
+        <p style="text-align: right">World Leading No. 1 Party Clown Service</p>
+      </div>
+      <nav class="containerBG">
+        <a href="#booking">Booking</a>
+        <a href="#ourClowns">Meet Our Clowns</a>
+        <a href="#faq">Frequently Asked Questions</a>
+        <a href="#testimonials">Testimonials</a>
+      </nav>
+    </header>
+
+    <main>
+      <img
+        id="balloon"
+        src="./assets/images/balloon.png"
+        alt="red balloon"
+        width="300px"
+      />
+      <div id="goToTop" class="row-flex">
+        <img
+          src="./assets/images/balloon.gif"
+          alt="moving balloon"
+          width="24px"
+        />
+        <p>back to top</p>
+      </div>
+      <h1>Book Your Favorite Clown For Your Special Birthday Party!</h1>
+      <section id="booking">
+        <h2>Place Your Booking Here</h2>
+        <hr />
+        <form style="display: flex; flex-direction: column">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required />
+          <label for="address">Party Address</label>
+          <input type="text" id="address" required />
+          <label for="datetime">Date and Time</label>
+          <input type="datetime-local" id="datetime" required />
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" required />
+          <label>Select Your Clown(s)</label>
+          <div class="checkboxes">
+            <div>
+              <input type="checkbox" id="MrPennywise" value="Mr. Pennywise" />
+              <label for="MrPennywise">Mr. Pennywise</label>
+            </div>
+            <div>
+              <input type="checkbox" id="WidePennywise" value="PennyWide" />
+              <label for="WidePennywise">PennyWide</label>
+            </div>
+            <div>
+              <input type="checkbox" id="Penny" value="Penny The Wisest" />
+              <label for="Penny">Penny The Wisest</label>
+            </div>
+            <div>
+              <input type="checkbox" id="NoPenny" value="Mrs. No Penny Left" />
+              <label for="NoPenny">Mrs. No Penny Left</label>
+            </div>
+            <div>
+              <input type="checkbox" id="PennyWest" value="Penny West" />
+              <label for="PennyWest">Penny West</label>
+            </div>
+          </div>
+          <label for="reqs">Special Requests</label>
+          <textarea type="text" id="reqs"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <div id="popup">
+        <div class="popupContainer containerBG">
+          <h2>
+            Thank you for choosing us. We'll make sure to bring enough balloons
+            and cookies for everyone &#129313;
+          </h2>
+          <div>
+            <h3>Your Booking Summary</h3>
+            <table>
+              <tr>
+                <th>name</th>
+                <td id="name">-</td>
+              </tr>
+              <tr>
+                <th>party at</th>
+                <td id="address">-</td>
+              </tr>
+              <tr>
+                <th>date and time</th>
+                <td id="datetime">-</td>
+              </tr>
+              <tr>
+                <th>guests</th>
+                <td id="guests">-</td>
+              </tr>
+              <tr>
+                <th>clowns</th>
+                <td id="clowns">-</td>
+              </tr>
+              <tr>
+                <th>special requests</th>
+                <td id="reqs">-</td>
+              </tr>
+            </table>
+          </div>
+          <p>We are very excited to see you</p>
+          <button id="popupButton">OK</button>
+        </div>
+      </div>
+      <section id="ourClowns">
+        <h2>Meet Our Special Clowns</h2>
+        <div class="clowns">
+          <div class="clown column-flex containerBG">
+            <h3>Mr. Pennywise</h3>
+            <figure>
+              <img
+                src="./assets/images/pennywise.jpg"
+                alt="Front view scary clown in abandoned building"
+                width="150px"
+                height="150px"
+                style="object-fit: cover"
+              />
+              <figcaption>
+                Designed by
+                <a
+                  href="https://www.freepik.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Freepik</a
+                >
+              </figcaption>
+            </figure>
+            <p>I'm Pennywise, the dancing clown.</p>
+            <p>His dancing never fails to entertain the guests!</p>
+          </div>
+          <div class="clown column-flex containerBG">
+            <h3>PennyWide</h3>
+            <figure>
+              <img
+                src="./assets/images/pennywide.jpg"
+                alt="Front view scary clown in abandoned building"
+                width="150px"
+                height="150px"
+                style="object-fit: cover"
+              />
+              <figcaption>
+                Designed by
+                <a
+                  href="https://www.freepik.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Freepik</a
+                >
+              </figcaption>
+            </figure>
+            <p>Smile Wide.</p>
+            <p>One look of his smile and your day instantly gets brighter!</p>
+          </div>
+          <div class="clown column-flex containerBG">
+            <h3>Penny The Wisest</h3>
+            <figure>
+              <img
+                src="./assets/images/penny.jpg"
+                alt="Front view scary clown in abandoned building"
+                width="150px"
+                height="150px"
+                style="object-fit: cover"
+              />
+              <figcaption>
+                Designed by
+                <a
+                  href="https://www.freepik.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Freepik</a
+                >
+              </figcaption>
+            </figure>
+            <p>
+              Why are piggy banks so wise? Cause they're filled with common
+              cents.
+            </p>
+            <p>He has a lot of clown philosophy to share with everyone.</p>
+          </div>
+          <div class="clown column-flex containerBG">
+            <h3>Mrs. No Penny Left</h3>
+            <figure>
+              <img
+                src="./assets/images/mrspenny.jpg"
+                alt="Front view scary clown in abandoned building"
+                width="150px"
+                height="150px"
+                style="object-fit: cover"
+              />
+              <figcaption>
+                Designed by
+                <a
+                  href="https://www.freepik.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Freepik</a
+                >
+              </figcaption>
+            </figure>
+            <p>Working graveshifts as the hustle never sleeps.</p>
+            <p>Our most diligent and high-performing clown yet.</p>
+          </div>
+          <div class="clown column-flex containerBG">
+            <h3>Penny West</h3>
+            <figure>
+              <img
+                src="./assets/images/pennywest.jpg"
+                alt="Front view scary clown in abandoned building"
+                width="150px"
+                height="150px"
+                style="object-fit: cover"
+              />
+              <figcaption>
+                Designed by
+                <a
+                  href="https://www.freepik.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Freepik</a
+                >
+              </figcaption>
+            </figure>
+            <p>God please bring our family back together yo.</p>
+            <p>His raps spits fire &#128293;</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <hr />
+        <div class="faqContent row-flex">
+          <div class="column-flex">
+            <article>
+              <h3>What is a CLOWN ?</h3>
+              <p>
+                Well, our clowns are very specially trained clowns to give the
+                best out of the best entertainment for you and every single one
+                of your guests.
+              </p>
+            </article>
+            <article>
+              <h3>Why do you need our clown for your birthday party?</h3>
+              <p>
+                A birthday party without a single clown? What a
+                <strong>BORING</strong> party! You don't want your guests to boo
+                at you now, do you?
+              </p>
+            </article>
+            <article>
+              <h3>Payment?</h3>
+              <p>
+                Our agency prioritizes your experience and satisfaction with our
+                service. Therefore, payment can be done after the party ends!
+                How fun!
+              </p>
+            </article>
+            <article>
+              <h3>How do I book a clown?</h3>
+              <p>
+                Fill out the form on this very same page, and we'll promise that
+                our clowns will find <i>you</i> before you even notice. Easy
+                peasy.
+              </p>
+            </article>
+            <article>
+              <h3>Special tricks or performances?</h3>
+              <p>
+                Yes! They have many tricks up their sleeves. From balloons,
+                magic, to making things disappear! However, some tricks are just
+                for special guests. Place a booking to find out!
+              </p>
+            </article>
+          </div>
+          <aside class="column-flex containerBG">
+            <h3>Need additional help?</h3>
+            <h4>Our 24/7 Customer Service is pleased to help you.</h4>
+            <img src="./assets/images/owner.jpg" width="100ox" />
+            <p>(207) 2727-272</p>
+            <p>or email your questions to</p>
+            <p><strong>help@derryagent.com</strong></p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <h2>Our Latest Clients</h2>
+        <hr />
+        <div class="testimonial">
+          <p>GEORGIE, 6</p>
+          <q>Very kind clown, he made <span>paper boats</span> for everyone</q>
+        </div>
+        <div class="testimonial">
+          <p>STAN, 14</p>
+          <q>
+            Very kind clown, he made balloons and <span>paper boats</span> for
+            everyone
+          </q>
+        </div>
+        <div class="testimonial">
+          <p>EDDIE, 39</p>
+          <q>
+            Very kind clown, he gave his signature on my cast and made
+            <span>paper boats</span>
+            for everyone
+          </q>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="row-flex">
+        <img src="./assets/images/logo.png" alt="red balloon" width="50px" />
+        <div>
+          <p class="logo">The Derry's &copy; 2024</p>
+          <p>You'll Float Too.</p>
+        </div>
+      </div>
+      <hr />
+      <div class="footerBottom">
+        <div>
+          <h2>Find Us</h2>
+          <span>or We'll find You :)</span>
+          <p>Fear Street 27, Derry, Maine</p>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <p>Penny, General Manager</p>
+          <p>+1 27272727</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+</html>
